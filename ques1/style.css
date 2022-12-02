@@ -1,0 +1,23 @@
+.main-body {
+    background-color: rgb(144, 127, 101);
+    
+    
+}
+
+
+.form-main {
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    font-size: 20px;
+    font-weight: 600;
+    border :none;
+    margin-left: 450px;
+    background-color: rgb(57, 117, 132);
+
+
+}

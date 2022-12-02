@@ -1,0 +1,53 @@
+
+Q Explain jwt in approx and prove it is a top 3 benefits
+===> 
+1>  JWT :- JSON WEB TOKEN
+means :-JSON Web Token is an open industry standard used to share information
+ between two entities, usually a frontend and a backend. They contain JSON objects which have the information that needs to be shared.
+
+2> JWTs consist of three parts separated by dots (.), which are:
+i> Header
+ii> Payload
+iii> Signature
+
+3> Therefore, a JWT typically looks like the following.
+eg:- "xxddcncnxxxuujcjncjcxjuuuuchbcjbcxjbxxjnuuuu.yynnnjncjcjhjcnxmnnnyyy.zzjdkjklcjdlkcdknvjnvkjdnmduczzz"
+
+Let’s break down the different parts.
+
+Header
+The header typically consists of two parts: the type of the token, which is JWT, and the hashing algorithm such as HMAC SHA256 
+ eg :- {
+  'alg': 'HS256',
+  'typ': 'JWT'
+}
+
+Payload
+The second part of the token is the payload, which contains the claims. Claims are statements about an entity (typically, the user) and additional metadata. There are three types of claims: reserved, public, and private claims
+
+ eg :- {
+  'sub': '1234567890',
+  'name': 'John Doe',
+  'admin': true
+}
+
+Signature
+To create the signature part you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that.
+
+eg :- HMACSHA256(
+  base64UrlEncode(header) + '.' +
+  base64UrlEncode(payload),
+  secret)
+
+  --------------------------------------------------------------------------
+
+ JWT Token Use:- 
+ 1> as an developer I always having need to authenticate or authorized use in register login api so jwt token provide us a good security for user authentication
+ 2>Line of code is less and more flexible to use
+ 3>JWT is used at an Internet scale. This highlights the ease of client side processing of JWTs on multiple platforms, especially, mobile.
+ 4>JSON parsers are common in most programming languages, because they map directly to objects, conversely XML doesn’t have a natural document-to-object mapping. This makes it easier to work with JWT than SAML assertions
+
+
+
+
+
